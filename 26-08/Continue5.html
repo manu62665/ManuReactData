@@ -1,0 +1,26 @@
+<html>
+<body>
+
+<p>Click the button to do a loop which will skip the array's element "Saab".</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var cars = ["BMW", "Volvo", "Saab", "Ford"];
+  var text = "";
+  var i;
+  for (i = 0; i < cars.length; i++) {
+    if (cars[i] === "Saab") {
+      continue;
+    }
+    text += cars[i] + "<br>";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
