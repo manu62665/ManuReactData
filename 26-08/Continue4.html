@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<p>Click the button to do a loop which will skip the numbers 2 and 3.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var text = "";
+  var i;
+  for (i = 1; i < 8; i++) {
+    if (i === 2 || i === 3) continue;
+    document.getElementById("demo").innerHTML += i + "<br>";
+  }
+}
+</script>
+
+</body>
+</html>
