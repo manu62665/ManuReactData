@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT FORM</title>
+    <style>
+        form{
+            margin:0 auto;
+            width:400px;
+            height:300px;
+            margin-top:50px;
+             }
+            p{
+            font-style: italic;
+            }
+          .validation{
+           border:2px double black;
+           float:left;
+           align-content:center;
+           align-items:center;
+           margin-left:400px;
+           padding-left:40px;
+           background-color:lemonchiffon;
+           }
+           .submit{
+            margin-top:20px;
+            margin-left:250px;
+             }
+             h3{
+                 text-align:center;
+                 color:blue;
+                 padding-right:100px;
+             }
+</style>
+
+</head>
+<body>
+    <h3>STUDENT FORM</h3>
+    <div class="container">
+    <div class="validation">
+    <form name ="myForm" onsubmit="return validation();">
+
+     <p>Name:<input type="text" size="40" name="Name"></p>
+     <p id="error1"></p>
+
+     <p>Age:<input style="margin-left:10px;"  type="number" size="65" name="Number"></p>
+     <p id="error2"></p>
+
+   
+    <p>Select Your Subject:
+    <select type="text" value="" name="Subject">
+          <option></option>
+          <option>...Choose Subject</option>
+          <option>JAVA</option>
+          <option>HTML</option>
+          <option>JAVASCRIPT</option>
+          <option>SAP</option>
+          <option>UI</option>
+</select></p>  
+<p id="error3"></p><br>
+
+<div class="submit">
+<input style="color:crimson"  type="submit" value="Submit" name="Submit">
+</div>
+</form>
+</div>
+</div>
+<script src="./json.js"></script>
+<script>
+    function validation(){
+          var  x= document.getElementById("error1");
+           if(document.myForm.Name.value == "" )
+            {
+            x.textContent = "Name is Required";
+            x.style.color="red";
+            document.myForm.Name.focus();
+            }
+
+            var  y=document.getElementById("error2");
+            if(document.myForm.Number.value=="")
+            {
+            y.textContent="Age is Required";
+            y.style.color="red"
+            document.myForm.Number.focus();
+            }
+         
+            var z=document.getElementById("error3");
+            if(document.myForm.Subject.value == "" )
+            {
+            z.textContent ="Subject is Required";
+            z.style.color = "red";
+            document.myForm.Subject.focus();
+            }
+            }
+			
+			
+</script>
+</body>
+</html>
