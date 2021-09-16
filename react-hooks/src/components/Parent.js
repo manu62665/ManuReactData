@@ -17,7 +17,7 @@ const Button = forwardRef((props, ref) => {
 		someExposedProperty: () => {
 			console.log(`we're inside the exposed property function!`);
 		},
-		username: "Venkatesh",
+		username: "Manoj",
 	}));
 	return (
 		<button ref={buttonRef} {...props}>

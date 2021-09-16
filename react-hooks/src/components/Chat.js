@@ -6,7 +6,7 @@ export function useDetails() {
 	return useContext(MessagesContext);
 }
 export default function Chat() {
-	const [ username, setUsername ] = useState("Manoj");
+	const [ username, setUsername ] = useState("Venkatesh");
 	return (
 		<div>
 			<MessagesContext.Provider value={{ username, setUsername }}>
